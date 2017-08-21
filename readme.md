@@ -1,5 +1,9 @@
 # GCode Analyzer
 
+## Install
+
+`pip install gcode_analyzer`
+
 ## CLI Usage
 
 `python -m gcode_analyzer.analyze [--z-acceleration Z_ACCELERATION] [--extruder-acceleration EXTRUDER_ACCELERATION] GCODE_FILE_PATH`
