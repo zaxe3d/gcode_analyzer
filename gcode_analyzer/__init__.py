@@ -1,6 +1,6 @@
 import math
 import datetime
-
+import re
 
 class GCode(object):
     def __init__(self, line):
@@ -9,7 +9,7 @@ class GCode(object):
         self.__process()
 
     def __process(self):
-        for parameter in self.__line.split(";")[0].split():
+        for parameter in re.sub('\(.+?\)', '', self.__line).split(";")[0].split():
             try:
                 self.__params[parameter[0]] = parameter[1:]
             except IndexError:
