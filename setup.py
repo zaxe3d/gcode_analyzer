@@ -1,9 +1,9 @@
 from distutils.core import setup
-import commands
+import subprocess
 
 
 def get_git_version():
-    output = commands.getoutput("git describe --abbrev=0 --tags")
+    output = subprocess.getoutput("git describe --abbrev=0 --tags")
     if "fatal" in output:
         return None
     return output
