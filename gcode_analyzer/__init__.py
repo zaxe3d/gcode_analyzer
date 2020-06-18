@@ -192,7 +192,10 @@ class Analyzer(object):
         if self.__gcode.get("G", int) == 28:
             all_none = True
             for coordinate in ["X", "Y", "Z"]:
-                value = self.__gcode.get(coordinate, float, None)
+                try:
+                    value = self.__gcode.get(coordinate, float, None)
+                except ValueError:
+                    value = None
                 if value is not None:
                     self.__pos[coordinate] = value
                     all_none = False

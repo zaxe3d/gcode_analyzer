@@ -15,10 +15,10 @@ def main():
     try:
         analyzer = Analyzer(args.path, z_acceleration=args.z_acceleration,
                             extruder_acceleration=args.extruder_acceleration)
-        print "Estimated Print Time: %s" % analyzer.get_formatted_time()
-        print "Filament Usage: %.2f meters" % (analyzer.get_filament_usage() / 1000)
+        print("Estimated Print Time: %s" % analyzer.get_formatted_time())
+        print("Filament Usage: %.2f meters" % (analyzer.get_filament_usage() / 1000))
     except IOError:
-        print "Error: %s does not exist" % args.path
+        print("Error: %s does not exist" % args.path)
 
 
 if __name__ == '__main__':

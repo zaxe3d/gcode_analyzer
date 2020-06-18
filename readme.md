@@ -2,7 +2,7 @@
 
 ## Install
 
-`pip install gcode_analyzer`
+`python -m pip install gcode_analyzer`
 
 ## CLI Usage
 
